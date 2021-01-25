@@ -1,0 +1,20 @@
+.home {
+  width: 100vw;
+  height: 100vh;
+  max-height: -webkit-fill-available;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  overflow-x: hidden;
+}
+
+.main {
+  flex-grow: 1;
+  background: yellow;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
