@@ -1,0 +1,26 @@
+#transact {
+  padding: 1rem;
+  width: 100vw;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    display: flex;
+    flex-flow: column;
+  }
+
+  form > * {
+    margin-bottom: 1rem;
+  }
+
+  .description-text {
+    padding: 18.5px 14px;
+    border-width: 0.07rem;
+    border-radius: 0.1rem;
+    font-family: "Roboto";
+    letter-spacing: 0.00938em;
+    font-size: 1rem;
+  }
+}
