@@ -11,9 +11,8 @@ export default function Home() {
       <div className="home">
         <div className="main">
           <Switch>
-            <Route exact path="/" component={Dashboard} />
+            <Route path="/dashboard" component={Dashboard} />
             <Route path="/settings" component={Settings} />
-            {/* <Route path="*" component={Error} /> */}
           </Switch>
         </div>
         <Navigation />

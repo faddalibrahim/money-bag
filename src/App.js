@@ -10,7 +10,6 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/settings" component={Settings} />
         <Route path="*" component={Error} />
       </Switch>
     </Router>
