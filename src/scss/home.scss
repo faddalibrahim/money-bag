@@ -8,12 +8,15 @@ html,
 body,
 #root {
   height: -webkit-fill-available;
+  max-height: 100vh;
+  overflow-y: hidden;
 }
 
 .home {
   width: 100vw;
-  min-height: 100vh;
+  // min-height: 100vh;
   min-height: -webkit-fill-available;
+  // height: 100vh;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
@@ -22,6 +25,8 @@ body,
 
 .main {
   flex-grow: 1;
+  display: flex;
+  flex-flow: column;
 }
 
 .navigation {

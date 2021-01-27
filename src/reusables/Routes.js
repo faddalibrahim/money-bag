@@ -1,7 +1,7 @@
 import DashboardIcon from "@material-ui/icons/DashboardSharp";
 import SettingsIcon from "@material-ui/icons/Settings";
 import NotificationsIcon from "@material-ui/icons/Notifications";
-import AddIcon from "@material-ui/icons/Add";
+import MonetizationOnIcon from "@material-ui/icons/MonetizationOn";
 
 const ROUTES = [
   {
@@ -14,7 +14,7 @@ const ROUTES = [
   },
   {
     route: "transact",
-    icon: <AddIcon />,
+    icon: <MonetizationOnIcon />,
   },
   {
     route: "settings",

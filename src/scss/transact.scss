@@ -1,6 +1,6 @@
 #transact {
   padding: 1rem;
-  width: 100vw;
+  // width: 100vw;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -9,14 +9,12 @@
   form {
     display: flex;
     flex-flow: column;
-    width: 100%;
+    width: 95%;
   }
 
   form > * {
     margin-bottom: 1rem;
-    // width: 80vw;
     width: -webkit-fill-available;
-    // width: max-content;
   }
 
   .description-text {
@@ -29,7 +27,7 @@
   }
 
   .description-text:focus {
-    border: 0.15rem solid #3f51b5;
+    border: 0.12rem solid #3f51b5;
     outline: none;
   }
 

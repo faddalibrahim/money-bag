@@ -7,7 +7,13 @@ export default function Navigation() {
       <div style={{ padding: "0.5rem" }}>
         <NavLink to={`/${route}`}>
           <center>{icon}</center>
-          <small style={{ textTransform: "capitalize", fontSize: "0.8rem" }}>
+          <small
+            style={{
+              textTransform: "capitalize",
+              fontSize: "0.8rem",
+              fontWeight: "500",
+            }}
+          >
             {route}
           </small>
         </NavLink>
