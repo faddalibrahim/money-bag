@@ -9,12 +9,12 @@ const ROUTES = [
     icon: <DashboardIcon />,
   },
   {
-    route: "notifications",
-    icon: <NotificationsIcon />,
-  },
-  {
     route: "transact",
     icon: <MonetizationOnIcon />,
+  },
+  {
+    route: "notifications",
+    icon: <NotificationsIcon />,
   },
   {
     route: "settings",
