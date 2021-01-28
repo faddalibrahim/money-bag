@@ -1,23 +1,15 @@
 import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
-import FormLabel from "@material-ui/core/FormLabel";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 
 import { Component } from "react";
-import { Paper, Typography } from "@material-ui/core";
+import { Paper } from "@material-ui/core";
 import TextField from "@material-ui/core/TextField";
 
 class FilterTransactions extends Component {
   render() {
     return (
-      <Paper
-        elevation="2"
-        style={{
-          padding: "1rem",
-          width: "100%",
-          marginBottom: "1rem",
-        }}
-      >
+      <Paper className="filter-transactions" elevation="1">
         <TextField
           id="source"
           label="search"
@@ -29,7 +21,6 @@ class FilterTransactions extends Component {
         />
         <RadioGroup
           row
-          //   center
           aria-label="transaction-type"
           name="transactionType"
           //   value={this.state.transactionType}
