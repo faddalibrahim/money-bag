@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { Paper, Typography } from "@material-ui/core";
+import FilterTransactions from "./FilterTransactions";
 
 class Dashboard extends Component {
   state = {
@@ -142,16 +143,7 @@ class Dashboard extends Component {
           }}
         >
           <div className="filter">
-            <Paper
-              elevation="2"
-              style={{
-                padding: "1rem",
-                width: "100%",
-                marginBottom: "1rem",
-              }}
-            >
-              Filter
-            </Paper>
+            <FilterTransactions />
           </div>
 
           <div
