@@ -1,6 +1,5 @@
 #transact {
   padding: 1rem;
-  // width: 100vw;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -29,9 +28,5 @@
   .description-text:focus {
     border: 0.12rem solid #3f51b5;
     outline: none;
-  }
-
-  .MuiFormGroup-root {
-    // flex-direction: row;
   }
 }

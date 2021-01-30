@@ -41,6 +41,11 @@ class FilterTransactions extends Component {
             control={<Radio color="primary" id="transactionType" />}
             label="Expenses"
           />
+          <FormControlLabel
+            value="investments"
+            control={<Radio color="primary" id="transactionType" />}
+            label="Investments"
+          />
         </RadioGroup>
       </Paper>
     );

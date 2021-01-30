@@ -8,22 +8,19 @@ class TransactionsCard extends Component {
   }
   render() {
     return (
-      <Paper
-        elevation="1"
-        style={{
-          padding: "1rem",
-          width: "100%",
-          // flexGrow: "1",
-          marginBottom: "1rem",
-          background: "linear-gradient(45deg, #0c5fde, #333)",
-          // background: "radial-gradient(circle,#0c5fde, #333)",
-          color: "white",
-          borderRadius: "0.5rem",
-        }}
-      >
-        <Typography variant="h5" align="right">
-          21
-        </Typography>
+      <Paper className="transactions-card" elevation="2">
+        <div className="income-box">
+          <h1>304</h1>
+          <small>income</small>
+        </div>
+        <div className="expenses-box">
+          <h1>740</h1>
+          <small>expenses</small>
+        </div>
+        <div className="investments-box">
+          <h1>240</h1>
+          <small>investments</small>
+        </div>
       </Paper>
     );
   }

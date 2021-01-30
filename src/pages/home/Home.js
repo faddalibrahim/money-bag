@@ -9,7 +9,7 @@ import Transact from "./../transact/Transact";
 export default function Home() {
   return (
     <Router>
-      <div className="home">
+      <div className="home test">
         <div className="main">
           <Switch>
             <Route path="/dashboard" component={Dashboard} />

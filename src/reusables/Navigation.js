@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 export default function Navigation() {
   const NAV = ROUTES.map(({ route, icon }) => {
     return (
-      <div style={{ padding: "0.5rem" }}>
+      <div className="navlink-wrapper">
         <NavLink to={`/${route}`}>
           <center>{icon}</center>
           <small
