@@ -5,23 +5,22 @@
   justify-content: space-between;
   align-items: center;
   flex-grow: 1;
-  padding: 1rem;
+  // padding: 1rem;
   background-color: #f7f7f7;
-  // background-color: rgba(255, 255, 255, 0.1);
 
   .transactions-card {
-    // padding: 1rem;
     width: 100%;
     margin-bottom: 1rem;
-    // background: linear-gradient(45deg, #0c5fde, #333);
     border-radius: 0.5rem;
 
-    // display: grid;
     justify-content: space-between;
     color: white;
-    // columns: 3;
-    column-count: 3;
+    column-count: 4;
     column-gap: 0;
+  }
+
+  .amount {
+    font-size: 1rem;
   }
 
   .transactions-card > * {
@@ -29,18 +28,28 @@
   }
 
   .income-box {
-    color: teal;
+    color: #777;
+    color: green;
     text-align: center;
     padding: 0.5rem 0;
   }
 
   .expenses-box {
+    color: #777;
     color: crimson;
     text-align: center;
     padding: 0.5rem 0;
   }
 
   .investments-box {
+    color: #777;
+    color: orange;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+
+  .savings-box {
+    color: #777;
     color: darkslateblue;
     text-align: center;
     padding: 0.5rem 0;
@@ -63,13 +72,44 @@
     // margin-bottom: 1rem;
     position: relative;
     z-index: 1;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
   }
 
   .transactions-list {
     padding: 1rem;
     flex-grow: 1;
-    overflow-y: scroll;
+    // overflow-y: scroll;
+    overflow-y: auto;
   }
 
   // DESKTOP STYLES
+}
+
+@media only screen and (min-width: 768px) {
+  .dashboard {
+    flex-flow: row;
+    justify-content: flex-start;
+    max-height: 100vh;
+
+    .transactions-card {
+      width: 10%;
+      height: 100%;
+      display: flex;
+      flex-flow: column;
+      margin: 0;
+      margin-right: 0.2rem;
+      border-radius: 0;
+      justify-content: space-evenly;
+    }
+
+    .transanctions-list-filter-paper {
+      // width: 50%;
+      height: 100%;
+      flex-grow: unset;
+      width: 50%;
+    }
+  }
 }

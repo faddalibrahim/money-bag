@@ -6,10 +6,15 @@ import { Component } from "react";
 import { Paper } from "@material-ui/core";
 import TextField from "@material-ui/core/TextField";
 
+import AccountBalanceIcon from "@material-ui/icons/AccountBalance";
+import TrendingUpIcon from "@material-ui/icons/TrendingUp";
+import TrendingDownIcon from "@material-ui/icons/TrendingDown";
+import AccountBalanceWalletIcon from "@material-ui/icons/AccountBalanceWallet";
+
 class FilterTransactions extends Component {
   render() {
     return (
-      <Paper className="filter-transactions" elevation="1">
+      <Paper className="filter-transactions" elevation="0">
         <TextField
           id="source"
           label="search"
@@ -19,6 +24,7 @@ class FilterTransactions extends Component {
           size="small"
           //   onChange={this.handleChange}
         />
+        <br></br>
         <RadioGroup
           row
           aria-label="transaction-type"
@@ -26,25 +32,30 @@ class FilterTransactions extends Component {
           //   value={this.state.transactionType}
           //   onChange={this.handleChange}
         >
-          <FormControlLabel
+          {/* <FormControlLabel
             value="All"
             control={<Radio color="primary" id="transactionType" />}
             label="All"
-          />
+          /> */}
           <FormControlLabel
             value="income"
             control={<Radio color="primary" id="transactionType" />}
-            label="Income"
+            label={<TrendingUpIcon />}
           />
           <FormControlLabel
             value="expenses"
             control={<Radio color="primary" id="transactionType" />}
-            label="Expenses"
+            label={<TrendingDownIcon />}
           />
           <FormControlLabel
             value="investments"
             control={<Radio color="primary" id="transactionType" />}
-            label="Investments"
+            label={<AccountBalanceWalletIcon />}
+          />
+          <FormControlLabel
+            value="savings"
+            control={<Radio color="primary" id="transactionType" />}
+            label={<AccountBalanceIcon />}
           />
         </RadioGroup>
       </Paper>

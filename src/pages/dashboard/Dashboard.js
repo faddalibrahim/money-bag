@@ -18,7 +18,7 @@ class Dashboard extends Component {
       <div className="dashboard">
         <TransactionsCard />
 
-        <Paper className="transanctions-list-filter-paper" elevation="1">
+        <Paper className="transanctions-list-filter-paper" elevation="0">
           <FilterTransactions />
           {/* <hr /> */}
 
