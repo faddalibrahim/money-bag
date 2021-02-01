@@ -1,4 +1,4 @@
-import { Paper, Typography } from "@material-ui/core";
+import { Paper } from "@material-ui/core";
 import { Component } from "react";
 import AccountBalanceIcon from "@material-ui/icons/AccountBalance";
 import TrendingUpIcon from "@material-ui/icons/TrendingUp";

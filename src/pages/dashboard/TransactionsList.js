@@ -1,4 +1,4 @@
-import { Paper, Typography } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import AccountBalanceIcon from "@material-ui/icons/AccountBalance";
 import TrendingUpIcon from "@material-ui/icons/TrendingUp";
 import TrendingDownIcon from "@material-ui/icons/TrendingDown";
@@ -6,25 +6,10 @@ import AccountBalanceWalletIcon from "@material-ui/icons/AccountBalanceWallet";
 import Card from "@material-ui/core/Card";
 
 export default function TransactionsList({ transactions }) {
-  const spitTransactions = transactions.map((transaction) => {
-    // eslint-disable-next-line default-case
-    switch (transaction.transactionType) {
-      case "income":
-        <TrendingUpIcon />;
-        break;
-      case "expenses":
-        <TrendingDownIcon />;
-        break;
-      case "investments":
-        <AccountBalanceWalletIcon />;
-        break;
-      case "savings":
-        <AccountBalanceIcon />;
-        break;
-    }
-
+  const spitTransactions = transactions.map((transaction, index) => {
     return (
       <Card
+        key={index}
         style={{
           marginBottom: "1rem",
           display: "flex",
