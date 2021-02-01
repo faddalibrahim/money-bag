@@ -12,9 +12,18 @@ import TrendingDownIcon from "@material-ui/icons/TrendingDown";
 import AccountBalanceWalletIcon from "@material-ui/icons/AccountBalanceWallet";
 
 class FilterTransactions extends Component {
+  handleChange = (e) => {
+    this.props.filter(e.target.value);
+  };
+
   render() {
     return (
-      <Paper className="filter-transactions" elevation="0">
+      <Paper
+        className="filter-transactions"
+        elevation="0"
+        // variant="outlined"
+        square
+      >
         <TextField
           id="source"
           label="search"
@@ -30,7 +39,7 @@ class FilterTransactions extends Component {
           aria-label="transaction-type"
           name="transactionType"
           //   value={this.state.transactionType}
-          //   onChange={this.handleChange}
+          onChange={this.handleChange}
         >
           {/* <FormControlLabel
             value="All"

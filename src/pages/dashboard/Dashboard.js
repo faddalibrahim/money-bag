@@ -11,6 +11,17 @@ import { dummy_data } from "./../../utils/dummy_data";
 class Dashboard extends Component {
   state = {
     transactions: [...dummy_data],
+    filtered: [],
+  };
+
+  filter = (keyword) => {
+    const filtered = this.state.transactions.filter(
+      (transaction) => transaction.transactionType === keyword
+    );
+
+    this.setState({
+      filtered,
+    });
   };
 
   render() {
@@ -19,10 +30,16 @@ class Dashboard extends Component {
         <TransactionsCard />
 
         <Paper className="transanctions-list-filter-paper" elevation="0">
-          <FilterTransactions />
+          <FilterTransactions filter={this.filter} />
           {/* <hr /> */}
 
-          <TransactionsList transactions={this.state.transactions} />
+          <TransactionsList
+            transactions={
+              this.state.filtered.length === 0
+                ? this.state.transactions
+                : this.state.filtered
+            }
+          />
         </Paper>
       </div>
     );

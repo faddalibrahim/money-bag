@@ -3,6 +3,7 @@ import AccountBalanceIcon from "@material-ui/icons/AccountBalance";
 import TrendingUpIcon from "@material-ui/icons/TrendingUp";
 import TrendingDownIcon from "@material-ui/icons/TrendingDown";
 import AccountBalanceWalletIcon from "@material-ui/icons/AccountBalanceWallet";
+import Card from "@material-ui/core/Card";
 
 export default function TransactionsList({ transactions }) {
   const spitTransactions = transactions.map((transaction) => {
@@ -23,19 +24,12 @@ export default function TransactionsList({ transactions }) {
     }
 
     return (
-      <Paper
-        elevation="0"
-        variant="outlined"
+      <Card
         style={{
-          // padding: "1rem",
           marginBottom: "1rem",
           display: "flex",
           alignItems: "center",
-          // backgroundColor: `${
-          //   transaction.transactionType === "expense"
-          //     ? "rgba(225,0,0,0.5)"
-          //     : "teal"
-          // }`,
+          padding: "1rem",
         }}
       >
         <div
@@ -44,7 +38,7 @@ export default function TransactionsList({ transactions }) {
             color: `${
               transaction.transactionType === "income"
                 ? "green"
-                : transaction.transactionType === "expense"
+                : transaction.transactionType === "expenses"
                 ? "crimson"
                 : transaction.transactionType === "investments"
                 ? "lightorange"
@@ -54,7 +48,7 @@ export default function TransactionsList({ transactions }) {
         >
           {transaction.transactionType === "income" ? (
             <TrendingUpIcon />
-          ) : transaction.transactionType === "expense" ? (
+          ) : transaction.transactionType === "expenses" ? (
             <TrendingDownIcon />
           ) : transaction.transactionType === "investments" ? (
             <AccountBalanceWalletIcon />
@@ -66,31 +60,17 @@ export default function TransactionsList({ transactions }) {
           <Typography
             variant="caption"
             style={{
-              // background: `${
-              //   transaction.transactionType === "expense" ? "crimson" : "teal"
-              // }`,
               padding: "0.4rem",
-              // color: "white",
               borderRadius: "10%",
             }}
           >
             {transaction.source}
           </Typography>
-          <Typography
-            variant="subtitle2"
-            align="right"
-            style={
-              {
-                // color: `${
-                //   transaction.transactionType === "expense" ? "crimson" : "teal"
-                // }`,
-              }
-            }
-          >
+          <Typography variant="subtitle2" align="right">
             GHC {transaction.amount}
           </Typography>
         </div>
-      </Paper>
+      </Card>
     );
   });
 

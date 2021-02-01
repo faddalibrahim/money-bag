@@ -7,7 +7,7 @@ export const dummy_data = [
     date: "21/02/2021",
   },
   {
-    transactionType: "expense",
+    transactionType: "expenses",
     amount: "600",
     source: "coffee",
     description: "I bought this on my way to school",
@@ -28,7 +28,7 @@ export const dummy_data = [
     date: "21/02/2021",
   },
   {
-    transactionType: "expense",
+    transactionType: "expenses",
     amount: "600",
     source: "pendrive",
     description: "I bought this on my way to school",
