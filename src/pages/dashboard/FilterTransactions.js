@@ -11,6 +11,10 @@ class FilterTransactions extends Component {
     this.props.filter(e.target.value);
   };
 
+  handleSearch = (e) => {
+    this.props.search(e.target.value);
+  };
+
   render() {
     return (
       <Paper
@@ -26,18 +30,19 @@ class FilterTransactions extends Component {
           variant="outlined"
           fullWidth
           size="small"
-          //   onChange={this.handleChange}
+          onChange={this.handleSearch}
         />
         <br></br>
         <RadioGroup
           row
           aria-label="transaction-type"
-          name="transactionType"
-          //   value={this.state.transactionType}
+          // name="transactionType"
+          // value="All"
           onChange={this.handleChange}
+          defaultValue="all"
         >
           <FormControlLabel
-            value="All"
+            value="all"
             control={<Radio color="primary" id="transactionType" />}
             label="All"
           />

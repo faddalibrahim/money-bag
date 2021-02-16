@@ -12,6 +12,7 @@ class Dashboard extends Component {
   state = {
     transactions: [...dummy_data],
     filtered: [],
+    currentFilter: "all",
   };
 
   filter = (keyword) => {
@@ -21,22 +22,35 @@ class Dashboard extends Component {
 
     this.setState({
       filtered,
+      currentFilter: keyword,
     });
   };
 
+  search = (keyword) => {
+    const filtered = this.state.transactions.filter(
+      (transaction) =>
+        JSON.stringify(transaction).includes(keyword) &&
+        transaction.transactionType === this.state.currentFilter
+    );
+    this.setState({ filtered });
+  };
+
   render() {
+    // alert(this.state.currentFilter);
+    console.log(this.state);
+
     return (
       <div className="dashboard">
         <TransactionsCard />
 
         <Paper className="transanctions-list-filter-paper" elevation="0">
-          <FilterTransactions filter={this.filter} />
+          <FilterTransactions filter={this.filter} search={this.search} />
 
           <TransactionsList
             transactions={
-              this.state.filtered.length === 0
-                ? this.state.transactions
-                : this.state.filtered
+              this.state.filtered.length
+                ? this.state.filtered
+                : this.state.transactions
             }
           />
         </Paper>
