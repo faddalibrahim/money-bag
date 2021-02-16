@@ -31,7 +31,6 @@ class Dashboard extends Component {
 
         <Paper className="transanctions-list-filter-paper" elevation="0">
           <FilterTransactions filter={this.filter} />
-          {/* <hr /> */}
 
           <TransactionsList
             transactions={

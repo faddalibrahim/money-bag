@@ -26,7 +26,7 @@ export default function TransactionsList({ transactions }) {
                 : transaction.transactionType === "expenses"
                 ? "crimson"
                 : transaction.transactionType === "investments"
-                ? "lightorange"
+                ? "orange"
                 : "darkblue"
             }`,
           }}
